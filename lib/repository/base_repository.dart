@@ -1,34 +1,34 @@
 import 'package:todo_app_crud/data/database_context.dart';
-import 'package:todo_app_crud/repository/disposable.dart';
+// import 'package:todo_app_crud/repository/disposable.dart';
 
 import '../models/base_model.dart';
 import 'repository.dart';
 
-class BaseRepository<T extends BaseModel> implements Repository<T>, Disposable {
+class BaseRepository<T extends BaseModel> implements Repository<T> {
 
   final List<T> _data; // Simulates a data store (e.g., database, in-memory list)
 
-  final DatabaseContext _dbContext;
+  // final DatabaseContext _dbContext;
 
-  DatabaseContext get dbContext => _dbContext;
+  // DatabaseContext get dbContext => _dbContext;
 
-  BaseRepository(List<T> initialData, this._dbContext) : _data = List<T>.from(initialData) {
-    _openConnection();
+  BaseRepository(List<T> initialData) : _data = List<T>.from(initialData) {
+    // _openConnection();
   }
 
-  Future<void> _openConnection() async {
-    await _dbContext.open();
-  }
+  // Future<void> _openConnection() async {
+  //   await _dbContext.open();
+  // }
 
-  // Close the database connection
-  Future<void> closeConnection() async {
-    await _dbContext.close();
-  }
+  // // Close the database connection
+  // Future<void> closeConnection() async {
+  //   await _dbContext.close();
+  // }
 
-  @override
-  void dispose() {
-    closeConnection();
-  }
+  // @override
+  // void dispose() {
+  //   closeConnection();
+  // }
 
   @override
   Future<void> create(T item) async {

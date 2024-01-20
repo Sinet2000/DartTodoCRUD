@@ -4,8 +4,8 @@ in `lib/`, and example unit test in `test/`.
 Added packages:
 ```bash
 dart pub add 
-dart pub add sqflite
-dart pub add path
+dart pub add drift sqlite3_flutter_libs path_provider path dev:drift_dev dev:build_runner
+dart pub add sqflite / remove
 
 ```
 ### Analyze:

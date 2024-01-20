@@ -3,7 +3,6 @@ import 'package:todo_app_crud/fakers/todo_item_faker.dart';
 import 'package:todo_app_crud/models/todo_item.dart';
 import 'package:todo_app_crud/repository/todo_item_repository.dart';
 import 'package:faker/faker.dart';
-import 'package:todo_app_crud/todo_app_crud.dart' as todo_app_crud;
 
 void main(List<String> arguments) async {
   final todoItem = TodoItemFaker.generateTodoItem(1);
@@ -13,10 +12,10 @@ void main(List<String> arguments) async {
   final todoItems = TodoItemFaker.generateTodoItems(totalCount);
   print('Generated TodoItems: $todoItems');
 
-  final dbContext = DatabaseContext();
-  await dbContext.open(); // Open the database connection
+  //final dbContext = DatabaseContext();
+  // await dbContext.open(); // Open the database connection
 
-  final todoItemRepository = TodoItemRepository(todoItems, dbContext);
+  final todoItemRepository = TodoItemRepository(todoItems);
 
   print('Initial Data:');
   print(await todoItemRepository.getAll());
@@ -39,5 +38,5 @@ void main(List<String> arguments) async {
   print('\nAfter Update:');
   print(await todoItemRepository.getAll());
   
-  await dbContext.close();
+  // await dbContext.close();
 }
