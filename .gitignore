@@ -1,0 +1,42 @@
+# Dart and Flutter specific files
+.dart_tool/
+.pub/
+/build/
+.dart_tools/
+*.iml
+
+# IntelliJ IDE files
+.idea/
+
+# Visual Studio Code files
+.vscode/
+
+# Flutter-specific files
+ios/Flutter/App.framework/
+ios/Flutter/App.framework.dSYM/
+ios/Flutter/Flutter.framework/
+ios/Flutter/Flutter.framework.dSYM/
+ios/Flutter/ephemeral/ios/
+macos/Flutter/Flutter.framework/
+macos/Flutter/Flutter.framework.dSYM/
+macos/Flutter/ephemeral/macos/
+webdev/
+.build/
+
+# Android build files
+/build/
+
+# iOS build files
+/ios/Runner/GeneratedPluginRegistrant.*
+
+# Android Studio files
+*.iml
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/dart.xml
+.idea/misc.xml
+.idea/vcs.xml
+.idea/jsLibraryMappings.xml
+
+# Visual Studio Code directories
+.vscode/
